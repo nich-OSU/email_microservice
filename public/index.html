@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, noarchive, nofollow" />
+  <title>Nicholas Murray</title>
+  <script src='main.js'></script>
+</head>
+<body>
+  <header>
+    EMAIL Microservice Tester
+  </header>
+  <main>
+    <section>
+      <h2>Email Info to send to MS</h2>
+      <p class="incoming">
+        The following details will be submitted to the HTTP API POST call.
+      </p>
+      <article>
+        <form id='email' action="/email_ms" method="POST">
+          <fieldset>
+            <legend>Personal Info</legend>
+            <p>
+              <label for="first_name" class="required">First Name :</label>
+              <input
+                type="text"
+                name="first_name"
+                id="first_name"
+                size="25"
+                maxlength="50"
+                required
+                placeholder="First Name"
+                aria-required="true"
+                autofocus />
+            </p>
+            <p>
+              <label for="last_name" class="required">Last Name :</label>
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                size="25"
+                maxlength="50"
+                required
+                placeholder="Last Name"
+                aria-required="true"/>
+            </p>
+            <p>
+              <label for="email" class="required">Email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                size="29"
+                maxlength="40"
+                required pattern="[^@]+@[^@]+.[a-z]+"
+                placeholder="username@host.com"
+                aria-required="true"/>
+            </p>
+            <p>
+              <label for="quantity">Quantity :</label>
+              <input
+                type="number"
+                name="quantity"
+                id="quantity"
+                size="10"
+                required
+                maxlength="15"
+                placeholder="qty of measure"/>
+            </p>
+            <p>
+              <label for="measure">Measure :</label>
+              <select name="measure" id="measure">
+                <option value="" disabled selected>choose measure</option>
+                <option value="times">times</option>
+                <option value="hours">hours</option>
+                <option value="days">days</option>
+                <option value="weeks">weeks</option>
+                <option value="months">months</option>
+              </select>
+            </p>
+            <p>
+              <label for="milestone">Milestone :</label>
+              <select name="milestone" id="milestone" >
+                <option value="" disabled selected>choose milestone</option>
+                <option value="no smoking">No Smoking</option>
+                <option value="running">Running</option>
+                <option value="no alcohol">No alcohol</option>
+                <option value="yoga">Yoga</option>
+                <option value="meditate">Meditate</option>
+              </select>
+            </p>
+            <label for="submit">
+              <button type="submit" id="submit" name="/email_ms">Submit</button>
+            </label>
+          </fieldset>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p><cite>&copy; 2023 Nicholas Murray</cite></p>
+  </footer>
+</body>
+</html>
