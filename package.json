@@ -13,5 +13,18 @@
     "forever": "^4.0.3",
     "nodemailer": "^6.9.10",
     "nodemon": "^3.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nich-OSU/email_microservice.git"
+  },
+  "keywords": [
+    "email",
+    "microservice",
+    "CS361"
+  ],
+  "bugs": {
+    "url": "https://github.com/nich-OSU/email_microservice/issues"
+  },
+  "homepage": "https://github.com/nich-OSU/email_microservice#readme"
 }
