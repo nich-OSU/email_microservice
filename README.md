@@ -32,7 +32,7 @@ An email text would be generated based on those inputs requested in the "Post" A
 ### Dependencies: 
 The dependencies used for this microservice are express, nodemailer, and bodyParser.
 
-The nodemailer program is very easy to use and further details can be found at this webpage: nodemailer.com . To use the ethereal email properly it is important to register a user and password from the Ethereal Email webpage: ethereal.email .
+The nodemailer program is very easy to use and further details can be found at this webpage: [nodemailer.com](https://nodemailer.com). To use the ethereal email properly it is important to register a user and password from the Ethereal Email webpage: [Ethereal Email](https://ethereal.email).
 
 > [!NOTE]
 > This username and password generated can then be input into the authorization portion of the nodemailer.createTransport() function, highlighted below.
