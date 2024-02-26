@@ -26,7 +26,8 @@ An email text would be generated based on those inputs requested in the "Post" A
 ### Return Info Received:
   > [!IMPORTANT]
   > This is the format of the response message to the POST request.
-  > {"accepted":["nutos@open.com"],"rejected":[],"ehlo":["PIPELINING","8BITMIME","SMTPUTF8","AUTH LOGIN PLAIN"],"envelopeTime":602,"messageTime":445,"messageSize":1628,"response":"250 Accepted [STATUS=new MSGID=Zdfgw.BRgEWXfYm4Zdvxz0XpHMXMElx4AAAAERe5rwRAVHKncVc9ldcSuCU]","envelope":{"from":"maryse.ward61@ethereal.email","to":["nutos@open.com"]},"messageId":"<076d074f-dbe6-162f-e4c2-889f0c4f2819@ethereal.email>"}
+  ![image](https://github.com/nich-OSU/email_microservice/assets/122307669/d289d2ae-90c7-47fc-89f9-16e62d0b777f)
+
 
 ### Dependencies: 
 The dependencies used for this microservice are express, nodemailer, and bodyParser.
