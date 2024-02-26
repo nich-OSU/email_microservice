@@ -1,10 +1,12 @@
 'use strict';
 
 const express = require("express");
-// const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 const app = express();
-const PORT = 1584;
+const PORT = 1776;
 
+app.use(bodyParser.json());
 app.use(express.urlencoded({
   extended: true
 }));
@@ -22,9 +24,6 @@ app.post("/email_ms", (req, res) => {
   const milestone = req.body.milestone;
 
   //EMAIL TEMPLATING:
-  // Use at least Nodemailer v4.1.0
-  const nodemailer = require('nodemailer');
-
   // Generate SMTP service account from ethereal.email
   nodemailer.createTestAccount((err, account) => {
     if (err) {
@@ -88,14 +87,14 @@ app.post("/email_ms", (req, res) => {
 
     transporter.sendMail(message, (err, info) => {
       if (err) {
+          res.status(500);
           console.log('Error occurred. ' + err.message);
           return process.exit(1);
       }
-
       console.log('Message sent: %s', info.messageId);
       // Preview only available when sending through an Ethereal account
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
+      res.status(200);
       res.send(info);
     });
 
